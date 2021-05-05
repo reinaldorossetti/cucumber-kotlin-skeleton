@@ -1,8 +1,8 @@
 .idea
-
 .allure
 allure-results
-.gradle
+.gradle/
+gradle/
 build
 out
 chromedriver*
@@ -19,3 +19,5 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+/gradlew.bat
+/gradlew

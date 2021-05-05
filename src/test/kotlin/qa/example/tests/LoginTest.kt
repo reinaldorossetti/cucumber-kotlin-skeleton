@@ -1,50 +1,25 @@
 package qa.example.tests
 
-import com.typesafe.config.ConfigBeanFactory
-import io.qameta.allure.Stories
-import qa.example.configs.Credentials
-import qa.example.extensions.WithExtensions
-import qa.example.extensions.WithTimer
-import qa.example.pages.login.LandingPage
-import qa.example.pages.login.LoginPage
-import org.testng.annotations.DataProvider
-import org.testng.annotations.Test
-import io.qameta.allure.Feature
-import io.qameta.allure.Story
+import io.qameta.allure.Allure.step
+import io.qameta.allure.Step
+import io.qameta.allure.model.Status
+import org.junit.jupiter.api.DisplayName
+import org.junit.jupiter.api.Test
 
-@Feature("Login")
-@Story("As a User I can login")
-class LoginTest : AbstractTest(), WithTimer, WithExtensions {
+class AllureSimpleTest {
 
-    val creds = ConfigBeanFactory.create(config.getConfig("default.credentials"), Credentials::class.java)
-    val loginPage = LoginPage(driver)
-    val landingPage = LandingPage(driver)
-
-    @Test(dataProvider = "invalidLogin")
-    fun checkInvalidLogin(user: String, pass: String) {
-        loginPage.open()
-        loginPage.login(user, pass)
-        loginPage.waitForLoginError()
+    @Test
+    @DisplayName("allureSimpleTest displayName")
+    fun allureSimpleTest() {
+        step("Simple step")
+        step("Simple step with status", Status.FAILED)
+        simpleTestMethod("method parameter")
     }
 
-    @Test(dataProvider = "validLogin", dependsOnMethods = ["checkInvalidLogin"])
-    fun checkValidLogin(user: String, pass: String) {
-        loginPage.open()
-        loginPage.login(user, pass)
-        landingPage.waitForPresent()
-        landingPage.logout()
+    @Step("Simple test method with step annotation")
+    fun simpleTestMethod(param: String) {
+        step("Method parameter: $param")
+        step("Simple step inside test method")
     }
-
-    @DataProvider
-    fun invalidLogin() = arrayOf(
-            arrayOf("nonexisting@ema.il", "*******"),
-            arrayOf(creds.email, "wrong_password")
-    )
-
-    @DataProvider
-    fun validLogin() = arrayOf(
-            arrayOf(creds.email, creds.pass)
-//            arrayOf("this-tests@should-fa.il", "password")
-    )
 
 }
