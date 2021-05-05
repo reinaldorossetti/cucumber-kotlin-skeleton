@@ -10,10 +10,10 @@ abstract class AbstractPage(driver: WebDriver) : WithPageUrl, WithWebDriver, Wit
 
     override fun baseUrl(): String = config.getString("application.url")
 
-    fun open() = open(pageUrl())
+    fun openUrl() = openUrl(pageUrl())
 
     @Step
-    private fun open(url: String) {
+    private fun openUrl(url: String) {
         log.info("open page: " + pageUrl())
         driver.get(url)
     }
