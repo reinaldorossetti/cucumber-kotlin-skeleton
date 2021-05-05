@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.support.PageFactory
 
-class LoginPage(driver: WebDriver) : AbstractPage(driver) {
+abstract class GoogleFind(driver: WebDriver) : AbstractPage(driver) {
 
     @FindBy(id = "email")
     lateinit var email: WebElement
@@ -25,11 +25,5 @@ class LoginPage(driver: WebDriver) : AbstractPage(driver) {
     }
 
     override fun pageUrl() = "${baseUrl()}/login"
-
-    override fun waitForPresent() {
-        email.waitForPresent()
-        password.waitForPresent()
-        submit.waitForPresent()
-    }
 
 }

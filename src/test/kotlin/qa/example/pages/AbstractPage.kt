@@ -6,7 +6,7 @@ import qa.example.extensions.WithWebDriver
 import org.openqa.selenium.WebDriver
 import io.qameta.allure.Step
 
-abstract class AbstractPage(driver: WebDriver) : PageComponent(driver), WithPageUrl, WithWebDriver, WithExtensions {
+abstract class AbstractPage(driver: WebDriver) : WithPageUrl, WithWebDriver, WithExtensions {
 
     override fun baseUrl(): String = config.getString("application.url")
 
