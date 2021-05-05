@@ -24,9 +24,7 @@ configure<AllureExtension> {
     autoconfigure = true
     aspectjweaver = true
     version = allureVersion
-
     clean = true
-
     useJUnit5 {
         version = allureVersion
     }

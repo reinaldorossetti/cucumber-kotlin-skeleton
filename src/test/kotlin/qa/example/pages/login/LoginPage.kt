@@ -1,6 +1,5 @@
 package qa.example.pages.login
 
-import qa.example.configs.Credentials
 import qa.example.pages.AbstractPage
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
@@ -31,26 +30,6 @@ class LoginPage(driver: WebDriver) : AbstractPage(driver) {
         email.waitForPresent()
         password.waitForPresent()
         submit.waitForPresent()
-    }
-
-    fun login(creds: Credentials) = login(creds.email, creds.pass)
-
-    fun login(user: String, pass: String) {
-        waitForPresent()
-        email.sendKeys(user)
-        password.sendKeys(pass)
-        submit.click()
-    }
-
-    fun waitForLoginSuccess() {
-        email.waitForAbsent()
-        password.waitForAbsent()
-        submit.waitForAbsent()
-    }
-
-    fun waitForLoginError(){
-        loginError.waitForPresent()
-        return
     }
 
 }
