@@ -6,13 +6,13 @@ import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.support.PageFactory
 
-abstract class GoogleFind(driver: WebDriver) : AbstractPage(driver) {
+class GoogleFind(private val driver: WebDriver) {
 
-    @FindBy(id = "email")
-    lateinit var email: WebElement
+    @FindBy(name = "q")
+    lateinit var pesquisa: WebElement
 
-    @FindBy(id = "password")
-    lateinit var password: WebElement
+    @FindBy(name = "btnK")
+    lateinit var button: WebElement
 
     @FindBy(css = "button[type=submit]")
     lateinit var submit: WebElement
@@ -24,6 +24,9 @@ abstract class GoogleFind(driver: WebDriver) : AbstractPage(driver) {
         PageFactory.initElements(driver, this)
     }
 
-    override fun pageUrl() = "${baseUrl()}/login"
+    fun pesquisaGoogle(){
+        pesquisa.sendKeys("Reinaldo Rossetti")
+        button.click()
+    }
 
 }

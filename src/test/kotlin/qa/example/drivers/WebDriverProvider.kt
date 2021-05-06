@@ -1,10 +1,10 @@
 package qa.example.drivers
 
+import com.typesafe.config.Config
+import com.typesafe.config.ConfigBeanFactory
 import qa.example.configs.WebDriverConfig
 import qa.example.configs.WebDriverConfig.Browser.CHROME
 import qa.example.configs.WebDriverConfig.Browser.FIREFOX
-import com.typesafe.config.Config
-import com.typesafe.config.ConfigBeanFactory
 import org.openqa.selenium.Dimension
 import org.openqa.selenium.Point
 import org.openqa.selenium.WebDriver

@@ -38,13 +38,13 @@ interface WithScreenshots : WithLog, WithWebDriver {
         return bytes
     }
 
-    @Step("screenshot with scale factor {1}")
-    fun WebElement.screenshot(scalingFactor: Float = config.getDouble("scalingFactor").toFloat()): Screenshot {
-        Thread.sleep(2000)
-        return AShot()
-                .shootingStrategy(ShootingStrategies.scaling(scalingFactor))
-                .takeScreenshot(driver, this)
-    }
+//    @Step("screenshot with scale factor {1}")
+//    fun WebElement.screenshot(scalingFactor: Float = config.getDouble("scalingFactor").toFloat()): Screenshot {
+//        Thread.sleep(2000)
+//        return AShot()
+//                .shootingStrategy(ShootingStrategies.scaling(scalingFactor))
+//                .takeScreenshot(driver, this)
+//    }
 
     @Step("Save image to {1}")
     fun BufferedImage.savePng(filename: String) {
