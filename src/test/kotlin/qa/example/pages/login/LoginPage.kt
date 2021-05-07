@@ -5,8 +5,10 @@ import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
 import org.openqa.selenium.support.FindBy
 import org.openqa.selenium.support.PageFactory
+import qa.example.extensions.BasePage
 
-class GoogleFind(private val driver: WebDriver) {
+
+open class GoogleFind(override val driver: WebDriver): BasePage(driver) {
 
     @FindBy(name = "q")
     lateinit var pesquisa: WebElement
@@ -25,6 +27,7 @@ class GoogleFind(private val driver: WebDriver) {
     }
 
     fun pesquisaGoogle(){
+        pesquisa.waitForPresent()
         pesquisa.sendKeys("Reinaldo Rossetti")
         button.click()
     }

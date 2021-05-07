@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="0" failures="0" name="qa.example.tests.AllureSimpleTest" time="0" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="qa.example.tests.AllureSimpleTest" time="8.926" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.1"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -13,14 +13,15 @@
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="user.script" value=""/>
-    <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\GitHub\selenium-kotlin-skeleton"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.9+7-LTS"/>
     <property name="kotlin.incremental.compilation" value="false"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="idea.io.use.nio2" value="true"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="C:\Users\reina\AppData\Local\Temp\"/>
     <property name="line.separator" value="
@@ -31,7 +32,7 @@
     <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1\plugins\maven\lib\maven-event-listener.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.9\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\apache-maven-3.6.3\bin;C:\gradle-6.7\bin;C:\Ruby30\bin;C:\GitHub\robot_automation_ui\drivers\IEDriverServer.exe;C:\Users\reina\AppData\Local\Android\Sdk\emulator;C:\Users\reina\AppData\Local\Android\Sdk\platform-tools;C:\Users\reina\AppData\Local\Android\Sdk\tools;C:\Users\reina\AppData\Local\Android\Sdk\tools\bin;C:\Program Files\Java\jdk-11.0.10\bin;C:\Program Files\Google\Chrome\Application;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\reina\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1\bin;C:\Users\reina\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.3\bin;C:\Program Files\JetBrains\RubyMine 2020.3.3\bin;C:\GitHub\robot_automation_ui\drivers\;C:\Users\reina\AppData\Roaming\npm;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.9\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Python39\Scripts\;C:\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\Program Files\dotnet\;C:\apache-maven-3.6.3\bin;C:\gradle-6.7\bin;C:\Ruby30\bin;C:\GitHub\robot_automation_ui\drivers\IEDriverServer.exe;C:\Users\reina\AppData\Local\Android\Sdk\emulator;C:\Users\reina\AppData\Local\Android\Sdk\platform-tools;C:\Users\reina\AppData\Local\Android\Sdk\tools;C:\Users\reina\AppData\Local\Android\Sdk\tools\bin;C:\Program Files\Java\jdk-11.0.10\bin;C:\Program Files\Google\Chrome\Application;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Ruby30\bin;C:\Users\reina\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1\bin;;C:\Users\reina\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2020.2.3\bin;;C:\Program Files\JetBrains\RubyMine 2020.3.3\bin;;C:\GitHub\robot_automation_ui\drivers\;C:\Users\reina\AppData\Local\Android\Sdk\tools\bin;C:\Users\reina\AppData\Roaming\npm;."/>
     <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1\plugins\maven\lib\maven3/conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="55.0"/>
@@ -65,4 +66,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
+  <testcase classname="qa.example.tests.AllureSimpleTest" name="allureSimpleTest" time="8.926"/>
 </testsuite>

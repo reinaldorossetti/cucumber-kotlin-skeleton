@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit
 
 open class LocalTestBase {
 
-    lateinit var driver: WebDriver
+    open lateinit var driver: WebDriver
 
     @Before
     fun setup() {

@@ -1,9 +1,10 @@
 package qa.example.extensions
 
+import org.openqa.selenium.WebDriver
 import org.slf4j.Logger
 
 
-object ProcHelper : WithLog {
+open class ProcHelper(override val driver: WebDriver?) : WithLog {
 
     override val log: Logger = logger()
 
