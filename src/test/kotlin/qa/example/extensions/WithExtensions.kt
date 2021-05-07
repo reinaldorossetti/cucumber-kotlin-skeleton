@@ -19,7 +19,7 @@ open class BasePage(open val driver: WebDriver?) {
         }
     }
 
-    fun WebElement.waitForPresent(timeoutSeconds: Long = 60) {
+    fun WebElement.waitForDisplayed(timeoutSeconds: Long = 60) {
             this.isDisplayed || fail("still waiting for element to be displayed: $this")
     }
 
@@ -37,6 +37,4 @@ open class BasePage(open val driver: WebDriver?) {
                     js.executeScript("return !!jQuery && jQuery.active == 0") as Boolean
             ) { "ajax is still in progress" }
     }
-
-
 }

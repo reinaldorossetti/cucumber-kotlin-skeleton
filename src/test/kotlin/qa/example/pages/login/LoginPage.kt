@@ -27,7 +27,7 @@ open class GoogleFind(override val driver: WebDriver): BasePage(driver) {
     }
 
     fun pesquisaGoogle(){
-        pesquisa.waitForPresent()
+        pesquisa.waitForDisplayed()
         pesquisa.sendKeys("Reinaldo Rossetti")
         button.click()
     }
